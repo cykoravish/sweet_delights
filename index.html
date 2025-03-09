@@ -14,12 +14,20 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <h1 class="logo">Enchanted Sweet Delights</h1>
-            <nav>
+            <h1 class="logo">
+                <span class="logo-full">Enchanted Sweet Delights</span>
+                <span class="logo-short">Sweet Delights</span>
+                <span class="logo-tiny">E.S.D</span>
+            </h1>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#home">Fairy Home</a></li>
                     <li><a href="#menu">Magic Menu</a></li>
-
                     <li><a href="#gallery">Wonder Gallery</a></li>
                     <li><a href="#contact">Pixie Post</a></li>
                 </ul>
@@ -63,43 +71,85 @@
 
     <!-- Menu Section -->
     <section id="menu" class="section">
-        <h2>Our Spellbinding Treats</h2>
+        <h2 class="section-title">Our Spellbinding Treats</h2>
         <div class="menu-grid">
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Choco Dream Cake">
-                <h3>Choco Spell Cake</h3>
-                <p>A potion of chocolate bliss</p>
+            <div class="menu-item" data-aos="fade-up">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            alt="Choco Dream Cake">
+                        <h3>Choco Spell Cake</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>A potion of chocolate bliss that will transport you to a world of enchantment with every bite.</p>
+                        <span class="magic-icon">✨</span>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3"
-                    alt="Croissants">
-                <h3>Cloud Kiss Croissants</h3>
-                <p>Fluffy dreams from the sky</p>
+            <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            alt="Croissants">
+                        <h3>Cloud Kiss Croissants</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>Fluffy dreams from the sky, each layer whispers secrets of buttery delight.</p>
+                        <span class="magic-icon">🌈</span>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1545587163-6c75ce439d47?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3"
-                    alt="Cupcakes">
-                <h3>Rainbow Pixie Cakes</h3>
-                <p>Colorful wishes in every bite</p>
+            <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://images.unsplash.com/photo-1545587163-6c75ce439d47?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            alt="Cupcakes">
+                        <h3>Rainbow Pixie Cakes</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>Colorful wishes in every bite, sprinkled with joy and magical delight.</p>
+                        <span class="magic-icon">🧚</span>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1619540158579-1b4fd3529849?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3"
-                    alt="Bread">
-                <h3>Wizard’s Wand Bread</h3>
-                <p>Crusty magic straight from the oven</p>
+            <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://images.unsplash.com/photo-1619540158579-1b4fd3529849?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            alt="Bread">
+                        <h3>Wizard's Wand Bread</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>Crusty magic straight from the oven, perfect for casting delicious spells.</p>
+                        <span class="magic-icon">🔮</span>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="https://plus.unsplash.com/premium_photo-1668698353797-d6e3c4b86ced?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Cupcakes">
-                <h3>Starlight Cupcakes</h3>
-                <p>Twinkling treats of joy</p>
+            <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://plus.unsplash.com/premium_photo-1668698353797-d6e3c4b86ced?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            alt="Cupcakes">
+                        <h3>Starlight Cupcakes</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>Twinkling treats of joy that shine with celestial sweetness in every bite.</p>
+                        <span class="magic-icon">⭐</span>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <img src="https://plus.unsplash.com/premium_photo-1663853494792-24f99c5fad7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Bread">
-                <h3>Moonbeam Loaf</h3>
-                <p>Glowing with enchanted flavor</p>
+            <div class="menu-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front">
+                        <img src="https://plus.unsplash.com/premium_photo-1663853494792-24f99c5fad7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            alt="Bread">
+                        <h3>Moonbeam Loaf</h3>
+                    </div>
+                    <div class="menu-item-back">
+                        <p>Glowing with enchanted flavor, each slice captures the essence of moonlight.</p>
+                        <span class="magic-icon">🌙</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -107,95 +157,190 @@
     <!-- New Section: Fairy Tale Origins -->
     <section id="origins" class="section origins-section">
         <div class="origins-content">
-            <h2>Fairy Tale Origins</h2>
-            <h3>The Legend of the Sugar Sprites</h3>
-            <p>Once upon a time, in a forest kissed by starlight, tiny Sugar Sprites discovered the art of baking with
-                moonbeams and giggles. They fluttered their wings over flour and sugar, creating treats so delightful
-                that humans begged to join their secret feasts. Thus, Enchanted Sweet Delights was born—a bakery where
-                every bite whispers a fairy tale!</p>
+            <h2 class="section-title">Fairy Tale Origins</h2>
+            <div class="story-container">
+                <div class="story-image">
+                    <div class="floating-sprites">
+                        <span class="sprite sprite-1">✨</span>
+                        <span class="sprite sprite-2">🧚</span>
+                        <span class="sprite sprite-3">🍰</span>
+                        <span class="sprite sprite-4">🌟</span>
+                    </div>
+                </div>
+                <div class="story-text">
+                    <h3>The Legend of the Sugar Sprites</h3>
+                    <p>Once upon a time, in a forest kissed by starlight, tiny Sugar Sprites discovered the art of baking with
+                        moonbeams and giggles. They fluttered their wings over flour and sugar, creating treats so delightful
+                        that humans begged to join their secret feasts.</p>
+                    <p>Thus, Enchanted Sweet Delights was born—a bakery where every bite whispers a fairy tale and every
+                        pastry holds a sprinkle of magic from another realm!</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- New Section: Magic Baking Workshop -->
     <section id="workshop" class="section workshop-section">
-        <h2>Magic Baking Workshop</h2>
+        <h2 class="section-title">Magic Baking Workshop</h2>
         <div class="workshop-grid">
-            <div class="workshop-item">
+            <div class="workshop-item" data-aos="zoom-in">
+                <div class="workshop-icon">🧁</div>
                 <h3>Pixie Dust Pastries</h3>
                 <p>Learn to sprinkle magic into flaky dough with our fairy instructors!</p>
+                <a href="#contact" class="workshop-btn">Join Workshop</a>
             </div>
-            <div class="workshop-item">
+            <div class="workshop-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="workshop-icon">🥖</div>
                 <h3>Wizard Wand Baguettes</h3>
                 <p>Shape enchanted bread wands that glow with flavor.</p>
+                <a href="#contact" class="workshop-btn">Join Workshop</a>
             </div>
-            <div class="workshop-item">
+            <div class="workshop-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="workshop-icon">🎂</div>
                 <h3>Starlight Frosting Art</h3>
                 <p>Master the art of twinkling cupcake designs with edible glitter!</p>
+                <a href="#contact" class="workshop-btn">Join Workshop</a>
             </div>
         </div>
     </section>
 
     <!-- New Section: Sweet Spells Trivia -->
     <section id="trivia" class="section trivia-section">
-        <h2>Sweet Spells Trivia</h2>
-        <div class="trivia-item">
-            <h3>What’s the secret ingredient in our Choco Spell Cake?</h3>
-            <p>A pinch of dragon’s breath chocolate, harvested under a crescent moon!</p>
-        </div>
-        <div class="trivia-item">
-            <h3>Why do our croissants float?</h3>
-            <p>They’re kissed by cloud pixies who lift them to fluffy perfection!</p>
-        </div>
-        <div class="trivia-item">
-            <h3>Who guards our bakery at night?</h3>
-            <p>A mischievous gnome named Sprinkles, armed with a sugar wand!</p>
+        <h2 class="section-title">Sweet Spells Trivia</h2>
+        <div class="trivia-container">
+            <div class="trivia-item" data-aos="fade-right">
+                <h3>What's the secret ingredient in our Choco Spell Cake?</h3>
+                <div class="trivia-answer">
+                    <p>A pinch of dragon's breath chocolate, harvested under a crescent moon!</p>
+                </div>
+            </div>
+            <div class="trivia-item" data-aos="fade-right" data-aos-delay="100">
+                <h3>Why do our croissants float?</h3>
+                <div class="trivia-answer">
+                    <p>They're kissed by cloud pixies who lift them to fluffy perfection!</p>
+                </div>
+            </div>
+            <div class="trivia-item" data-aos="fade-right" data-aos-delay="200">
+                <h3>Who guards our bakery at night?</h3>
+                <div class="trivia-answer">
+                    <p>A mischievous gnome named Sprinkles, armed with a sugar wand!</p>
+                </div>
+            </div>
         </div>
     </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="section">
-        <h2>Whimsical Bakery Wonders</h2>
+        <h2 class="section-title">Whimsical Bakery Wonders</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Donuts">
-                <p>Glitter-Glazed Donut Dreams</p>
+            <div class="gallery-item" data-aos="flip-left">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                        alt="Donuts">
+                </div>
+                <div class="gallery-caption">
+                    <p>Glitter-Glazed Donut Dreams</p>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://plus.unsplash.com/premium_photo-1668698355438-4ece5269dfac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Pastries">
-                <p>Fairy Wing Pastries</p>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="100">
+                <div class="gallery-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1668698355438-4ece5269dfac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                        alt="Pastries">
+                </div>
+                <div class="gallery-caption">
+                    <p>Fairy Wing Pastries</p>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://plus.unsplash.com/premium_photo-1664205766253-7c84015af5dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                    alt="Cookies">
-                <h3>Enchanted Cookie Spells</h3>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="200">
+                <div class="gallery-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1664205766253-7c84015af5dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                        alt="Cookies">
+                </div>
+                <div class="gallery-caption">
+                    <p>Enchanted Cookie Spells</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2>Whisper to Our Pixies</h2>
-        <form class="contact-form" id="contact-form">
-            <input type="text" placeholder="Your Fairy Name" required>
-            <input type="email" placeholder="Your Magic Scroll (Email)" required>
-            <textarea placeholder="Your Enchanted Words" rows="5" required></textarea>
-            <button type="submit">Cast Your Message!</button>
-        </form>
+        <h2 class="section-title">Whisper to Our Pixies</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Fairy Dust Lane, Enchanted Forest</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Open: 7am - 7pm (Closed on Full Moons)</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 Magic-CAKE-123</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>pixies@enchantedsweets.com</p>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Fairy Name" required>
+                    <span class="form-sparkle">✨</span>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Magic Scroll (Email)" required>
+                    <span class="form-sparkle">✨</span>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Enchanted Words" rows="5" required></textarea>
+                    <span class="form-sparkle">✨</span>
+                </div>
+                <button type="submit">Cast Your Message!</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Enchanted Sweet Delights - Crafted with 🌙 & 🍭</p>
-        <div>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Enchanted Sweet Delights</h2>
+                <p>Where Every Bite is Magical</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Spells</h3>
+                <ul>
+                    <li><a href="#home">Fairy Home</a></li>
+                    <li><a href="#menu">Magic Menu</a></li>
+                    <li><a href="#gallery">Wonder Gallery</a></li>
+                    <li><a href="#contact">Pixie Post</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Our Magic</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Enchanted Sweet Delights - Crafted with 🌙 & 🍭</p>
         </div>
     </footer>
 
+    <div class="cursor-sparkle"></div>
+    <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./script.js"></script>
 </body>
 
 </html>
+
