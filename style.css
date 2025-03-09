@@ -410,12 +410,197 @@ nav ul li a:hover {
 .story-image {
   flex: 1;
   min-width: 280px;
-  height: 300px;
+  height: 350px; /* Increased height */
   position: relative;
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.4), rgba(221, 160, 221, 0.4));
   border-radius: var(--border-radius);
-  border: 2px dashed var(--text-light);
+  border: 3px dashed var(--secondary);
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.bakery-scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Floating Cakes */
+.floating-cake {
+  position: absolute;
+  font-size: 3rem; /* Larger size */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+  z-index: 2;
+}
+
+.cake-1 {
+  top: 15%;
+  left: 20%;
+  animation: float-rotate 12s infinite ease-in-out;
+}
+
+.cake-2 {
+  top: 60%;
+  left: 75%;
+  animation: float-rotate 15s infinite ease-in-out reverse;
+  font-size: 3.5rem;
+}
+
+.cake-3 {
+  top: 75%;
+  left: 30%;
+  animation: float-rotate 18s infinite ease-in-out;
+  font-size: 2.8rem;
+}
+
+.cake-4 {
+  top: 25%;
+  left: 65%;
+  animation: float-rotate 14s infinite ease-in-out reverse;
+  font-size: 3.2rem;
+}
+
+.cake-5 {
+  top: 45%;
+  left: 15%;
+  animation: float-rotate 16s infinite ease-in-out;
+  font-size: 2.5rem;
+}
+
+.cake-6 {
+  top: 10%;
+  left: 50%;
+  animation: float-rotate 13s infinite ease-in-out reverse;
+  font-size: 3.3rem;
+}
+
+.cake-7 {
+  top: 80%;
+  left: 60%;
+  animation: float-rotate 17s infinite ease-in-out;
+  font-size: 2.7rem;
+}
+
+.cake-8 {
+  top: 40%;
+  left: 80%;
+  animation: float-rotate 11s infinite ease-in-out reverse;
+  font-size: 3.8rem;
+}
+
+/* Magic Sparkles */
+.magic-sparkle {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0;
+  z-index: 1;
+}
+
+.sparkle-1 {
+  top: 30%;
+  left: 40%;
+  animation: sparkle-fade 4s infinite 0s;
+}
+
+.sparkle-2 {
+  top: 60%;
+  left: 20%;
+  animation: sparkle-fade 4s infinite 1s;
+}
+
+.sparkle-3 {
+  top: 20%;
+  left: 70%;
+  animation: sparkle-fade 4s infinite 2s;
+}
+
+.sparkle-4 {
+  top: 70%;
+  left: 50%;
+  animation: sparkle-fade 4s infinite 3s;
+}
+
+/* Sugar Trail */
+.sugar-trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="white" opacity="0.5"/><circle cx="30" cy="40" r="0.8" fill="white" opacity="0.5"/><circle cx="50" cy="20" r="1.2" fill="white" opacity="0.5"/><circle cx="70" cy="50" r="0.6" fill="white" opacity="0.5"/><circle cx="90" cy="30" r="1" fill="white" opacity="0.5"/><circle cx="20" cy="80" r="0.8" fill="white" opacity="0.5"/><circle cx="40" cy="60" r="1.2" fill="white" opacity="0.5"/><circle cx="60" cy="90" r="0.6" fill="white" opacity="0.5"/><circle cx="80" cy="70" r="1" fill="white" opacity="0.5"/></svg>');
+  opacity: 0.7;
+  animation: sugar-drift 30s infinite linear;
+}
+
+/* Cake Stand Illustration */
+.bakery-illustration {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.cake-stand {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+.cake-tier {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--primary-light), var(--primary));
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tier-1 {
+  bottom: 0;
+  width: 140px;
+  height: 40px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #f8d7da, #f5c2c7);
+  border: 2px solid #fff;
+}
+
+.tier-2 {
+  bottom: 40px;
+  width: 100px;
+  height: 35px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #ffe0eb, #ffb6c1);
+  border: 2px solid #fff;
+}
+
+.tier-3 {
+  bottom: 75px;
+  width: 70px;
+  height: 30px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #ffc2d1, #ff8da9);
+  border: 2px solid #fff;
+}
+
+.cake-topper {
+  position: absolute;
+  bottom: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+  animation: float 3s infinite ease-in-out;
+}
+
+.story-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  animation: pulse 5s infinite ease-in-out;
+  z-index: 1;
 }
 
 .floating-sprites {
@@ -427,31 +612,69 @@ nav ul li a:hover {
 .sprite {
   position: absolute;
   font-size: 2rem;
-  animation: float-around 10s infinite linear;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
+/* Add more sprites */
 .sprite-1 {
   top: 20%;
   left: 30%;
-  animation-delay: 0s;
+  animation: float-around 10s infinite linear;
 }
-
 .sprite-2 {
   top: 50%;
   left: 60%;
-  animation-delay: 2s;
+  animation: float-around 12s infinite linear reverse;
 }
-
 .sprite-3 {
   top: 70%;
   left: 20%;
-  animation-delay: 4s;
+  animation: float-around 15s infinite linear;
 }
-
 .sprite-4 {
   top: 30%;
   left: 70%;
-  animation-delay: 6s;
+  animation: float-around 8s infinite linear reverse;
+}
+.sprite-5 {
+  top: 40%;
+  left: 40%;
+  animation: float-around 11s infinite linear;
+}
+.sprite-6 {
+  top: 60%;
+  left: 80%;
+  animation: float-around 9s infinite linear reverse;
+}
+.sprite-7 {
+  top: 80%;
+  left: 50%;
+  animation: float-around 13s infinite linear;
+}
+.sprite-8 {
+  top: 25%;
+  left: 85%;
+  animation: float-around 14s infinite linear reverse;
+}
+
+/* Add sparkle trails */
+.sprite::after {
+  content: "✨";
+  position: absolute;
+  font-size: 1rem;
+  opacity: 0.6;
+  animation: fade-out 2s infinite ease-out;
+  transform: translate(-50%, -50%);
+}
+
+/* Add decorative corner elements */
+.story-image::after {
+  content: "🌟";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem;
+  animation: sparkle 2s infinite;
 }
 
 .story-text {
@@ -934,19 +1157,19 @@ footer {
 
 @keyframes float-around {
   0% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(1) rotate(0deg);
   }
   25% {
-    transform: translate(30px, -30px) scale(1.2);
+    transform: translate(30px, -30px) scale(1.2) rotate(90deg);
   }
   50% {
-    transform: translate(0, -60px) scale(1);
+    transform: translate(0, -60px) scale(1) rotate(180deg);
   }
   75% {
-    transform: translate(-30px, -30px) scale(0.8);
+    transform: translate(-30px, -30px) scale(0.8) rotate(270deg);
   }
   100% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(1) rotate(360deg);
   }
 }
 
@@ -994,6 +1217,70 @@ footer {
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+/* New Animations */
+@keyframes float-rotate {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-20px) rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(20px) rotate(-10deg) scale(0.9);
+  }
+}
+
+@keyframes sparkle-fade {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sugar-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Add this to your existing CSS */
+
+/* Add this to your existing animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0.6;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px, -10px) scale(0.5);
   }
 }
 

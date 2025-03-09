@@ -186,4 +186,129 @@ const swiper = new Swiper(".swiper", {
     }
   })
   
+  document.addEventListener("DOMContentLoaded", () => {
+    // Create interactive sugar particles
+    const storyImage = document.querySelector(".story-image")
+  
+    if (storyImage) {
+      // Create sugar particles on mouse move
+      storyImage.addEventListener("mousemove", (e) => {
+        createSugarParticle(e, storyImage)
+      })
+  
+      // Make cake elements interactive
+      const cakes = document.querySelectorAll(".floating-cake")
+      cakes.forEach((cake) => {
+        cake.addEventListener("mouseenter", function () {
+          this.style.transform = "scale(1.3) rotate(10deg)"
+          createSparkleEffect(this)
+        })
+  
+        cake.addEventListener("mouseleave", function () {
+          this.style.transform = ""
+        })
+      })
+    }
+  })
+  
+  // Function to create sugar particles
+  function createSugarParticle(e, parent) {
+    const particle = document.createElement("div")
+    particle.className = "sugar-particle"
+  
+    // Calculate position relative to the parent
+    const rect = parent.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+  
+    // Set particle styles
+    particle.style.cssText = `
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: white;
+          border-radius: 50%;
+          top: ${y}px;
+          left: ${x}px;
+          opacity: 0.8;
+          pointer-events: none;
+          z-index: 10;
+          animation: particle-fade 1.5s forwards;
+      `
+  
+    parent.appendChild(particle)
+  
+    // Remove particle after animation
+    setTimeout(() => {
+      particle.remove()
+    }, 1500)
+  }
+  
+  // Function to create sparkle effect
+  function createSparkleEffect(element) {
+    for (let i = 0; i < 5; i++) {
+      const sparkle = document.createElement("div")
+      sparkle.className = "cake-sparkle"
+  
+      // Random position around the element
+      const x = Math.random() * 60 - 30
+      const y = Math.random() * 60 - 30
+  
+      sparkle.style.cssText = `
+              position: absolute;
+              content: '✨';
+              font-size: 1.5rem;
+              top: 50%;
+              left: 50%;
+              transform: translate(calc(-50% + ${x}px), calc(-50% + ${y}px));
+              opacity: 0;
+              pointer-events: none;
+              z-index: 20;
+              animation: sparkle-pop 1s forwards;
+          `
+  
+      sparkle.textContent = "✨"
+      element.appendChild(sparkle)
+  
+      // Remove sparkle after animation
+      setTimeout(() => {
+        sparkle.remove()
+      }, 1000)
+    }
+  }
+  
+  // Add these animations to your CSS
+  document.head.insertAdjacentHTML(
+    "beforeend",
+    `
+      <style>
+          @keyframes particle-fade {
+              0% {
+                  transform: translate(0, 0) scale(1);
+                  opacity: 0.8;
+              }
+              100% {
+                  transform: translate(${Math.random() * 40 - 20}px, ${-30 - Math.random() * 20}px) scale(0);
+                  opacity: 0;
+              }
+          }
+          
+          @keyframes sparkle-pop {
+              0% {
+                  transform: translate(calc(-50% + ${Math.random() * 60 - 30}px), calc(-50% + ${Math.random() * 60 - 30}px)) scale(0);
+                  opacity: 0;
+              }
+              50% {
+                  opacity: 1;
+                  transform: translate(calc(-50% + ${Math.random() * 80 - 40}px), calc(-50% + ${Math.random() * 80 - 40}px)) scale(1.2);
+              }
+              100% {
+                  transform: translate(calc(-50% + ${Math.random() * 100 - 50}px), calc(-50% + ${Math.random() * 100 - 50}px)) scale(0);
+                  opacity: 0;
+              }
+          }
+      </style>
+  `,
+  )
+  
   
